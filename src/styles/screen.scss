@@ -14,16 +14,71 @@ body {
   font: $base-text-size / 1 $base-font-family;
 }
 
+h1 {
+  text-align: center;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 100px;
   grid-gap: 20px;
-  border: 2px solid #666;
 }
 
 .grid div {
   background-color: rgb(41, 53, 215);
   color: white;
   padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  grid-area: hd;
+  background-color: rgb(186, 27, 210);
+  padding: 20px;
+}
+
+footer {
+  grid-area: ft;
+  background-color: rgb(186, 27, 210);
+  padding: 20px;
+}
+
+article {
+  grid-area: main;
+  background-color: rgb(180, 230, 38);
+  padding: 20px;
+  color: black;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: rgb(186, 27, 210);
+  padding: 20px;
+}
+
+.grid1 {
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 20px;
+  color: white;
+  padding: 20px;
+  grid-template-areas:
+    "hd"
+    "main"
+    "sidebar"
+    "ft";
+}
+
+@media (min-width: 640px) {
+  .grid1 {
+    grid-template-columns: 2fr 4fr;
+    grid-template-areas:
+      "hd      hd"
+      "sidebar main"
+      "ft      ft";
+  }
 }
