@@ -21,6 +21,16 @@ class App extends Component {
         <aside>Aside</aside>
         <footer>Footer</footer>
       </div>
+      <div className='grid2'>
+        <header>Header</header>
+        <article>
+          <h1>Article</h1>
+          <p>content for my article</p>
+        </article>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+        <div className='test'>T</div>
+      </div>
     </div>
   }
 }
